@@ -2,26 +2,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/stylesheet.css">
     <title>WeatherAppVanilla</title>
   </head>
    <body>
-    <h1>Welcome to Nozzie's WeatherApp</h1>
+    <div class="weatherApp">
+      <h1>Welcome to Nozzie's WeatherApp</h1>
      <section class="header">
       <form>
-        <input type="search" placeholder="Enter a city.." required />
-        <input type="submit" value="Search" />
+        <input class="search-input" type="search" placeholder="Enter a city.." required />
+        <input class="search-button" type="submit" value="Search" />
       </form>
     </section>
     <section class="weather-today">
-      <div>
-        <h1>Paris</h1>
+      <div class="today">
+        <h2>Paris</h2>
         <p>
           Day ti:me, description
           <br />
-          Humidity: 66%, Wind: 3.13km/h
+          Humidity: <strong>66%</strong>, Wind: <strong>3.13km/h</strong> 
         </p>
       </div>
-      <div>🌤️ 12°C</div>
+      <div class="temp-today">🌤️ 12°C</div>
     </section>
 
     <footer>
@@ -34,5 +36,6 @@
         >on Netlify</a
       >
     </footer>
+    </div>
   </body>
 </html>
