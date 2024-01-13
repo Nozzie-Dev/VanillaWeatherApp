@@ -91,7 +91,12 @@ footer {
 }
 
 .forecast-temp {
-  font-size: 24px;
-  font-weight: bold;
-  color: #007bff;
+  color: #18546d;
+}
+
+.min {
+  opacity: 0.75;
+}
+.max {
+  font-weight: bolder;
 }
