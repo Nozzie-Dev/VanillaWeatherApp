@@ -45,6 +45,8 @@ function searchCity(city) {
   axios.get(apiUrl).then(setWeather);
 }
 
+searchCity("Paris");
+
 function handleSearchSubmit(event) {
   event.preventDefault();
   let searchInput = document.querySelector(".search-input");
@@ -56,4 +58,28 @@ function handleSearchSubmit(event) {
 let searchFormElement = document.querySelector(".search");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
-//searchCity("Pretoria");
+function setForecast() {
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+      <div class="forecast-block">
+        <div class="forecast-day"> ${day}
+        </div>
+            <img src="icon_url_placeholder.png" alt="Weather Icon" class="icon"/>
+            <div class="forecast-temp">25°C
+            </div>
+        <div > <span class="min">13</span>°C /  <span class="max">27</span>°C
+        </div>
+      </div>
+    `;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
+setForecast();

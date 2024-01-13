@@ -66,3 +66,32 @@ footer {
   justify-items: right;
   padding: 15px;
 }
+
+.forecast {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  padding: 20px;
+  justify-self: center;
+}
+
+.forecast-block {
+  background-color: #98baf2;
+  border: 1px solid #18546d;
+  border-radius: 8px;
+  box-shadow: 0 5px 3px #18546d;
+  padding: 20px;
+  text-align: center;
+}
+
+.forecast-day {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.forecast-temp {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+}
